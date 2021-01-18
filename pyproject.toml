@@ -1,4 +1,4 @@
-[tool.poetry]
+[tool.poetry.metadata]
 name = "mesmerize"
 version = "0.2.3"
 readme = "README.md"
