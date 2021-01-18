@@ -1,63 +1,84 @@
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry]
 name = "mesmerize"
 version = "0.2.3"
+readme = "README.md"
 description = "Calcium imaging analysis platform"
-authors = ["Kushal Kolar, Daniel Dondorp"]
+authors = [
+    "Kushal Kolar, Daniel Dondorp"
+]
 license = "GNU General Public License v3.0"
 
-[tool.poetry.urls]
-Paper = "https://doi.org/10.1101/840488"
-Documentation = "http://docs.mesmerizelab.org/"
-Bug Tracker = "https://github.com/kushalkolar/MESmerize/issues"
+repository = "https://github.com/kushalkolar/MESmerize"
+documentation = "http://docs.mesmerizelab.org"
+
+classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows :: Windows 10",
+        "Topic :: Scientific/Engineering :: Bio-Informatics",
+        "Topic :: Scientific/Engineering :: Image Recognition",
+        "Topic :: Scientific/Engineering :: Information Analysis",
+        "Topic :: Scientific/Engineering :: Visualization",
+        "Intended Audience :: Science/Research"
+]
 
 [tool.poetry.dependencies]
-python = "~=3.6,<3.7"
-numpy = "~=1.18"
-cycler = "==0.10.0"
-Cython = "==0.29.20"
-dask = "==1.1.1"
-future = "==0.18.2"
-h5py = "==2.10.0"
-ipykernel = "~=4.10"
-ipython = "==7.15.0"
-ipyparallel = "==6.3"
-MarkupSafe = "==1.1.1"
-matplotlib = "==3.2.2"
-opencv-contrib-python = "~=4.2"
-opencv-python = "~=4.2"
-pandas = "==0.25.3"
-Pillow = "==5.4.1"
-psutil = "==5.7.0"
-PyQt5 = "==5.9.2"
-python-dateutil = "~=2.8.0"
-QtPy = "==1.6.0"
-scikit-image = "==0.17.2"
-scikit-learn = "==0.20.2"
-scipy = "==1.2.1"
-seaborn = "==0.9.0"
-spyder = "==3.3.3"
-tifffile = "==0.15.1"
-tqdm = "==4.37.0"
-tables = "==3.6.1"
-joblib = "==0.15.1"
-tslearn = "==0.2.2"
-graphviz = "==0.13"
-numba = "==0.50.0"
-bottleneck = "==1.2.1"
-tensorflow = "~=1.15"
-PeakUtils
-holoviews
-jupyter
-pynwb
-pyqtgraph
-tk
-tcl
-yapf
-qtap
+python = "^3.6,<3.7"
+
+numpy = "1.18"
+Cycler = "0.10.0"
+jupyter = "^1.0.0"
+Cython = "^0.29.21"
+dask = "1.1.1"
+future = "0.18.2"
+h5py = "2.10.0"
+ipykernel = "4.10"
+ipython = "7.15.0"
+ipyparallel = "6.3"
+MarkupSafe = "1.1.1"
+matplotlib = "3.2.2"
+pandas = "0.25.3"
+Pillow = "5.4.1"
+psutil = "5.7.0"
+PyQt5 = "5.9.2"
+QtPy = "1.6.0"
+scipy = "1.2.1"
+seaborn = "0.9.0"
+spyder = "3.3.3"
+tqdm = "4.37.0"
+tables = "3.6.1"
+joblib = "0.15.1"
+tslearn = "0.2.2"
+tifffile = "2019.7.26.2"
+graphviz = "0.13"
+numba = "0.50.0"
+Bottleneck = "1.2.1"
+tensorflow = "1.15.3"
+scikit-image = "0.17.2"
+scikit-learn = "0.20.2"
+python-dateutil = "2.8.0"
+PeakUtils = "1.3.0"
+holoviews = "1.14.0"
+pynwb = "^1.4.0"
+pyqtgraph = "^0.11.1"
+opencv-contrib-python = "4.2.0.34"
+tk = "0.1.0"
+Tcl = "0.2"
+yapf = "0.30.0"
+qtap = "0.1.2"
+opencv-python = "4.2.0.32"
 
 [tool.poetry.dev-dependencies]
-jupyterlab
+pytest = "^6.2.1"
+
+[tool.poetry.scripts]
+mesmerize = "mesmerize:__main__"
+
+[tools.poetry.urls]
+paper = "https://doi.org/10.1101/840488"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
