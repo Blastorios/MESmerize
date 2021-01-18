@@ -1,4 +1,4 @@
-[tool.poetry.metadata]
+[tool.flit.metadata]
 name = "mesmerize"
 version = "0.2.3"
 readme = "README.md"
@@ -24,7 +24,7 @@ classifiers = [
         "Intended Audience :: Science/Research"
 ]
 
-[tool.poetry.dependencies]
+[tool.flit.dependencies]
 python = "^3.6,<3.7"
 
 numpy = "1.18"
@@ -70,15 +70,15 @@ yapf = "0.30.0"
 qtap = "0.1.2"
 opencv-python = "4.2.0.32"
 
-[tool.poetry.dev-dependencies]
+[tool.flit.dev-dependencies]
 pytest = "^6.2.1"
 
-[tool.poetry.scripts]
+[tool.flit.scripts]
 mesmerize = "mesmerize:__main__"
 
-[tools.poetry.urls]
+[tools.flit.urls]
 paper = "https://doi.org/10.1101/840488"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["flit"]
+build-backend = "flit.buildapi"
